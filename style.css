@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html {
+  font-size: 100%;
+  }
+img  {
+    max-width: 100%;
+  }
+
+/*home*/
+.page-home{ 
+  display: flex;
+  justify-content: space-between;
+}
+#home-photos-left{
+  width: 160px;
+  margin-left: 20px;
+}
+#home-center{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+#home-title{
+  height: 100vh;
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 90px;
+}
+#logo {
+  width: 210px;
+}
+#home-photos-right{
+  width: 155px;
+  margin-right: 20px;
+}
+.home-indus-text{
+  position: absolute;
+  top: 10%;
+  right: 25%;
+  
+  font-size: 600px;
+  font-family: 'Londrina Shadow', cursive;
+  color: rgba(0,0,0,20%);
+}
+
+/*studios*/
+.studios{
+  display: flex;
+  justify-content: space-between;
+}
+
+  /*left,right*/
+  .left-square, .right-square{
+    width: 160px;
+    height: 110px;
+    background: black;
+    margin-bottom: 10px;
+  }
+
+  .left-square{
+    margin-left: 20px;
+  }
+  .right-square{
+    margin-right: 20px;
+  }
+
+
+  /*center*/
+
+  .studio-title{
+    margin-top: 50px;
+  }
+  h2{
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  p{
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .studios-about{
+    text-align: center;
+  }
+  .studio-intro{
+    padding: 0 20%;
+    text-align: justify;
+  }
+  .studios-detail{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15%;
+  }
+  .studio-photo{
+    width: 400px;
+  }
+  .studios-info{
+    position:relative;
+    margin-top: 10%;
+  }
+  .indus-text{
+    position:absolute;
+    font-size: 600px;
+    top: -450px;
+    font-family: 'Londrina Shadow', cursive;
+  }

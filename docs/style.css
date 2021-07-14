@@ -1,110 +1,355 @@
-@charset "UTF-8";
+body{
+  background-color: hsl(180,30%,80%);
+}
 
-/*共通部分*/
-html {
-  font-size: 100%;
-  }
-img  {
-    max-width: 100%;
-  }
+/* --メッセージ-- */
+#message-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
 
-/*home*/
-.page-home{ 
-  display: flex;
-  justify-content: space-between;
-}
-#home-photos-left{
-  width: 160px;
-  margin-left: 20px;
-}
-#home-center{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-h1{
-  display: flex;
-  justify-content: center;
-  font-family: 'Noto Sans JP', sans-serif;
-}
-#home-title{
-  height: 100vh;
-  font-family: 'Londrina Shadow', cursive;
-  text-align: center;
-  font-size: 90px;
-}
-#logo {
-  width: 210px;
-}
-#home-photos-right{
-  width: 155px;
-  margin-right: 20px;
-}
-.home-indus-text{
+#message{
   position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+
+  padding-top: 5%;
+  width: 50%;
+  height: 30%;
+  font-family: serif;
+  font-size: 40px;
+  background-color: rgba(255,255,255,0.9);
+}
+
+#message2{
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+
+  padding-top: 20%;
+  width: 50%;
+  height: 30%;
+  font-family: serif;
+  font-size: 20px;
+}
+
+/* --電車-- */
+.train{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(image/train.png);
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+/*-- 全ての項目-- */
+li.item{
+  display: inline-block;
+  /* width: 20~70%; */
+}
+
+
+
+/* --雲-- */
+#cloud-list{
+  position: fixed;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  height: 100vh;  
+  z-index: -3;
+}
+
+img.cloud{
+  position: absolute;
+  /* width,height: 150~300px */
+  /* top：0~150px */
+}
+
+
+
+/* --背景-- */
+#back-list{
+  position: fixed;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+
+img.building, img.mountain{
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+}
+
+div.tunnel{
+  display: inline-block;
+  position: absolute;
+  width : 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+
+
+/* --その他-- */
+#other-list{
+  position: fixed;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* 1,UFO */
+img.UFO{
+  display: inline-block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top : 10%;
+  /* 名前/一回当たりの時間/イージーイーズ/開始までの時間/再生する回数/再生方向/スタイル適用するか/再生か停止か */
+  animation: UFOAnimation 2s ease 0s infinite alternate backwards running;
+}
+
+/* 2,風船 */
+img.balloon{
+  display: inline-block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  animation: balloonAnimation 5s ease 0s infinite normal backwards running;
+}
+
+/* 3,車 */
+img.car{
+  display: inline-block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
   top: 10%;
-  right: 25%;
-  
-  font-size: 600px;
-  font-family: 'Londrina Shadow', cursive;
-  color: rgba(0,0,0,20%);
+  animation: carAnimation 2s ease-in-out 0s infinite alternate backwards running;
 }
 
-/*studios*/
-.studios{
-  display: flex;
-  justify-content: space-between;
+/* 4,お金 */
+img.money {
+  display: inline-block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  animation: moneyAnimation 5s ease-out 0s infinite normal backwards running;
 }
 
-  /*left,right*/
-  .left-square, .right-square{
-    width: 160px;
-    height: 110px;
-    background: black;
-    margin-bottom: 10px;
+/* 5,星 */
+img.star{
+  display: inline-block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  animation: starAnimation 2s ease-in-out 0s infinite normal backwards running;
+}
+
+/* 6,おばけ */
+img.ghost{
+  display: inline-block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  animation: ghostAnimation 3s ease 0s infinite reverse backwards running;
+}
+
+/* 7,竜 */
+img.dragon{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: dragonAnimation 7s ease 1s infinite normal backwards running;
+}
+
+/* 8,文 */
+p.text{
+  display: inline-block;
+  position: absolute;
+  top: 10%; 
+  font-family: serif;
+  font-size: 70px;
+  color: black;
+}
+
+/* 8,文 */
+p.text2{
+  display: inline-block;
+  position: absolute;
+  top: 10%; 
+  font-family: serif;
+  font-size: 70px;
+  color: white;
+}
+
+p.text3{
+  display: inline-block;
+  position: absolute;
+  top: 30%; 
+  font-family: serif;
+  font-size: 40px;
+  color: white;
+}
+
+/* 音声 */
+.audio{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* 空間 */
+.blank{
+  height: calc(90 * 100vw * 0.7);
+}
+
+
+
+/* アニメーション！　*/
+/* 1,UFO */
+@keyframes UFOAnimation {
+  0% {
+    transform: scale(0.5) rotate(45deg) translateY(-5in);
   }
 
-  .left-square{
-    margin-left: 20px;
-  }
-  .right-square{
-    margin-right: 20px;
+  50% {
+    transform: scale(1)
   }
 
+  100% {
+    transform: scale(1.5) rotate(-45deg) translateY(5in);
+  }
+}
 
-  /*center*/
+/* 2,風船 */
+@keyframes balloonAnimation{
+  0% {
+    transform: translateY(5in) rotate(30deg);
+  }
 
-  .studio-title{
-    margin-top: 50px;
+  50%{
+    transform: translateX(5em);
   }
-  h2{
-    font-family: 'Alegreya Sans SC', sans-serif;
+
+  100% {
+    transform: translateY(-5in) rotate(-30deg);
   }
-  p{
-    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 3,車 */
+@keyframes carAnimation{
+  0% {
+    transform: rotate(15deg);
   }
-  .studios-about{
-    text-align: center;
+
+  100% {
+    transform: rotate(-15deg);
   }
-  .studio-intro{
-    padding: 0 20%;
-    text-align: justify;
+}
+
+
+/* 4,お金 */
+@keyframes moneyAnimation{
+  0% {
+    transform: translate(10em,2.5in) rotate(30deg);
   }
-  .studios-detail{
-    display: flex;
-    justify-content: space-around;
-    padding: 0 15%;
+
+  25%{
+    transform: translate(10em,1in) rotate(-30deg);
   }
-  .studio-photo{
-    width: 400px;
+
+  50%{
+    transform: translate(-10em,0in) rotate(30deg);
   }
-  .studios-info{
-    position:relative;
-    margin-top: 10%;
+
+  75%{
+    transform: translate(10em,-1in) rotate(-30deg);
   }
-  .indus-text{
-    position:absolute;
-    font-size: 600px;
-    top: -450px;
-    font-family: 'Londrina Shadow', cursive;
+
+  100% {
+    transform: translate(-10em,-2.5in) rotate(30deg);
   }
+}
+
+/* 5,星 */
+@keyframes starAnimation{
+  0% {
+    transform: translate(400px,-400px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(-400px,400px) rotate(-10deg);;
+  }
+}
+
+/* 6,おばけ */
+@keyframes ghostAnimation {
+  0% {
+    transform: scale(0.5) rotate(45deg) translateY(-10in);
+  }
+
+  50% {
+    transform: scale(1)
+  }
+
+  100% {
+    transform: scale(1.5) rotate(-45deg) translateY(10in);
+  }
+}
+
+/* 7,竜 */
+@keyframes dragonAnimation{
+  0% {
+    transform: translate(0) rotate(0deg);
+  }
+
+  25%{
+    transform: translate(50em,-2in) rotate(160deg);
+  }
+
+  50%{
+    transform: translate(50m) rotate(180deg);
+  }
+
+  75%{
+    transform: translate(80em,5in) rotate(200deg);
+  }
+  100% {
+    transform: translate(0) rotate(360deg);
+  }
+}
